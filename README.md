@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
 ## For Running the Sample App
 
 ```sh
-git clone https://github.com/user_name/hdfc-ergo.git
+git clone https://github.com/XephorNova/hdfc-ergo.git
 
 cd hdfc-ergo
 

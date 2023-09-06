@@ -8,12 +8,17 @@ var height = Dimensions.get('window').height; //full height
 
 export default function ERGO({
   ActionComponent,
+  sdk_key,
+  user_details,
+  insurance_type,
 }: {
   ActionComponent: any;
   sdk_key: string;
   user_details: string;
   insurance_type: string;
 }) {
+  console.log(sdk_key);
+  console.log(user_details);
   const { view, setShowView } = useControlWebView();
   useEffect(() => {
     const backAction = () => {
@@ -42,7 +47,7 @@ export default function ERGO({
     return (
       <WebView
         source={{
-          uri: 'https://pehchaan.hdfcergo.com',
+          uri: `https://hdfc-ergo-web.vercel.app/${insurance_type}&user_details=${user_details}&sdk_key=${sdk_key}`,
         }}
         style={{
           flex: 1,

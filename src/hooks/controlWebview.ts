@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { BackHandler, Alert } from 'react-native';
+import { useState } from 'react';
 
 const useControlWebView = () => {
   const [view, setView] = useState<boolean | undefined>(false);
