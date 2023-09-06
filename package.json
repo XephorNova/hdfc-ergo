@@ -160,7 +160,6 @@
     ]
   },
   "dependencies": {
-    "@react-navigation/native": "^6.1.7",
     "react-native-webview": "^13.5.1"
   }
 }

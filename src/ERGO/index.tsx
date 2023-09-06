@@ -41,13 +41,20 @@ export default function ERGO({
     }
     return () => backHandler.remove();
   }, [view]);
+  console.log(
+    `https://hdfc-ergo-web.vercel.app/${
+      insurance_type || ''
+    }?user_details=${user_details}&sdk_key=${sdk_key}`
+  );
   if (!view) {
     return <ActionComponent onClose={() => setShowView()} />;
   } else {
     return (
       <WebView
         source={{
-          uri: `https://hdfc-ergo-web.vercel.app/${insurance_type}&user_details=${user_details}&sdk_key=${sdk_key}`,
+          uri: `https://hdfc-ergo-web.vercel.app/${
+            insurance_type || ''
+          }?user_details=${user_details}&sdk_key=${sdk_key}`,
         }}
         style={{
           flex: 1,
