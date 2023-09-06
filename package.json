@@ -119,6 +119,9 @@
       "prettier"
     ],
     "rules": {
+      "react-hooks/exhaustive-deps": [
+        "off"
+      ],
       "prettier/prettier": [
         "error",
         {
