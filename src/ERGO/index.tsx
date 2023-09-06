@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
 import { Dimensions, BackHandler, Alert } from 'react-native';
-
-var width = Dimensions.get('window').width; //full width
-var height = Dimensions.get('window').height; //full height
 // import { Text } from 'react-native';
 import { WebView } from 'react-native-webview';
 import useControlWebView from '../hooks/controlWebview';
-import type { BackHandlerStatic } from 'react-native/Libraries/Utilities/BackHandler';
-import type { NativeEventSubscription } from 'react-native';
+var width = Dimensions.get('window').width; //full width
+var height = Dimensions.get('window').height; //full height
 
-export default function TestComponent({
+export default function ERGO({
   ActionComponent,
 }: {
   ActionComponent: any;
+  sdk_key: string;
+  user_details: string;
+  insurance_type: string;
 }) {
   const { view, setShowView } = useControlWebView();
   useEffect(() => {

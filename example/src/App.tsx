@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { StyleSheet, type GestureResponderEvent } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { SafeAreaView, Button } from 'react-native';
-import { TestComponent, useControlWebView } from 'hdfc-ergo';
+import { ERGO } from 'hdfc-ergo';
 
 const OpenCloseButton = ({ onClose }: { onClose: Function }) => {
   return <Button title="Open Fam" onPress={() => onClose()} />;
@@ -12,10 +12,13 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       {/* <Text>Result: {result}</Text> */}
-      <TestComponent
+      <ERGO
         ActionComponent={({ onClose }: { onClose: Function }) => (
           <OpenCloseButton onClose={onClose} />
         )}
+        sdk_key="<your-sdk-key"
+        insurance_type="<type_of_insurance>"
+        user_details="<user-details>"
       />
     </SafeAreaView>
   );
