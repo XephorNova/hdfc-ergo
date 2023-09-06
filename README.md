@@ -33,7 +33,7 @@ export default function App() {
         )}
         sdk_key="<your-sdk-key"
         user_details="<user-details>"
-        insurance_type
+        insurance_type="<insurance-type>"
       />
     </SafeAreaView>
   );
@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
 });
 ```
 
+- `sdk_key` will provided by hdfc_ergo which will authenticate the invocation of HDFC.
 - `ActionComponent` is Mandatory component that needs to be passed which will trigger the Webview for the form
 - `user_details` will be different for different_type of insurance.
 - `insurance_type` if insurance type is not provided it will initiate the journey from listing all type of insurance.
